@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+main,
+footer {
+  position: relative;
+}
+
+.stage {
+  display: block;
+  width: 100%;
+}
+
+.poinboard {
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  transform: translateX(50%);
+  width: 10%;
+  background-color: silver;
+}
+
+.foundation,
+.boardhead {
+  height: 15px;
+}
+
+.foundation {
+  margin-top: 15px;
+}
+
+.boardhead {
+  margin-bottom: 15px;
+}
+.points {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.point {
+  width: 80%;
+  border: solid 2px black;
+  margin: 1px auto;
+  padding: 1px 0px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background-color: #282825;
+}
+
+.point.active {
+  background-color: #eeeb05;
+}
+
+.coinboard h1 {
+  margin: 15px 0px;
+}
+
+.coinboard button {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+.coinboard button:hover {
+  cursor: pointer;
+  opacity: 0.7
+}
+
+.coinboard button:disabled {
+  background-color: gray;
+  cursor: default;
+  opacity: 1;
+}
