@@ -11,46 +11,43 @@ footer {
 }
 
 .poinboard {
-  position: absolute;
-  bottom: 2%;
-  right: 50%;
-  transform: translateX(50%);
-  width: 10%;
   background-color: silver;
+  width: 128px;
+  padding: 0px 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.points {
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  max-height: 370px;
+}
+
+.point {
+  background-color: gray;
+  border: solid 2px black;
+  border-radius: 5px;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1px 0px;
+  width: 60px;
+}
+
+.point.active {
+  background-color: yellow;
+  color: red;
+  border-color: red;
 }
 
 .foundation,
 .boardhead {
   height: 15px;
-}
-
-.foundation {
-  margin-top: 15px;
-}
-
-.boardhead {
-  margin-bottom: 15px;
-}
-.points {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.point {
-  width: 80%;
-  border: solid 2px black;
-  margin: 1px auto;
-  padding: 1px 0px;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  background-color: #282825;
-}
-
-.point.active {
-  background-color: #eeeb05;
 }
 
 .coinboard h1 {
