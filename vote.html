@@ -1,132 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>投票アプリ</title>
-    <link rel="stylesheet" href="resetcss.css">
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-    <main>
 
-      <div class="title">
-        <h1>説明</h1>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>投票アプリ</title>
+  <link rel="stylesheet" href="resetcss.css">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
 
+<body>
+  <main>
+
+    <div class="title">
+      <legend>説明</legend>
+    </div>
+
+    <div class="ctrlboard">
+      <legend>Setting Board</legend>
       <div>
+        <label>投票者の総人数：</label>
+        <input type="text" class="inputnumber" value="10">
+        <button class="setnumber">確認</button>
+      </div>
+      <div >
+        <button class="reset">リセット</button>
+      </div>
+    </div>
 
+    <img class="stage" src="image/curtains.jpg" alt="ステージ">
+
+    <div class="poinboard">
+      <div class="boardhead">
       </div>
 
-      <img class="stage" src="image/curtains.jpg" alt="ステージ">
-
-      <div class="poinboard">
-        <div class="boardhead">
-        </div>
         <div class="points">
-          <div class="point active">
-            1
-          </div>
-          <div class="point">
-            2
-          </div>
-          <div class="point">
-            3
-          </div>
-          <div class="point">
-            4
-          </div>
-          <div class="point">
-            5
-          </div>
-          <div class="point">
-            6
-          </div>
-          <div class="point">
-            7
-          </div>
-          <div class="point">
-            8
-          </div>
-          <div class="point">
-            9
-          </div>
-          <div class="point">
-            10
-          </div>
-          <div class="point">
-            1
-          </div>
-          <div class="point">
-            2
-          </div>
-          <div class="point">
-            3
-          </div>
-          <div class="point">
-            4
-          </div>
-          <div class="point">
-            5
-          </div>
-          <div class="point">
-            6
-          </div>
-          <div class="point">
-            7
-          </div>
-          <div class="point">
-            8
-          </div>
-          <div class="point">
-            9
-          </div>
-          <div class="point">
-            10
-          </div>
-          <div class="point">
-            1
-          </div>
-          <div class="point">
-            2
-          </div>
-          <div class="point">
-            3
-          </div>
-          <div class="point">
-            4
-          </div>
-          <div class="point">
-            5
-          </div>
-          <div class="point">
-            6
-          </div>
-          <div class="point">
-            7
-          </div>
-          <div class="point">
-            8
-          </div>
-          <div class="point">
-            9
-          </div>
-          <div class="point">
-            10
-          </div>
         </div>
-        <div class="foundation">
-        </div>
-      </div>
 
-    </main>
-
-    <footer>
-      <div class="operationboard">
-        <div class="coinboard">
-          <h1>あなた持っているCOIN数:<span class="coin">3</span></h1>
-          <button>投票する</button>
-        </div>
+      <div class="foundation">
       </div>
-    </footer>
-  </body>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="operationboard">
+      <div class="coinboard">
+        <h1>あなた持っているCOIN数:<span class="coin">3</span></h1>
+        <button class="votebtn">投票する</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="script.js">
+
+  </script>
+</body>
+
 </html>

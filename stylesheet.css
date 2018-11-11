@@ -10,6 +10,13 @@ footer {
   width: 100%;
 }
 
+.title,
+.ctrlboard {
+  border: solid 1px black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .poinboard {
   background-color: silver;
   width: 128px;
@@ -23,9 +30,8 @@ footer {
 .points {
   margin: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  max-height: 370px;
 }
 
 .point {
