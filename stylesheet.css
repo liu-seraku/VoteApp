@@ -19,7 +19,7 @@ footer {
 
 .poinboard {
   background-color: silver;
-  width: 128px;
+  width: 168px;
   padding: 0px 10px;
   position: absolute;
   bottom: 5%;
@@ -38,11 +38,11 @@ footer {
   background-color: gray;
   border: solid 2px black;
   border-radius: 5px;
-  font-size: 8px;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
-  padding: 1px 0px;
-  width: 60px;
+  padding: 5px 0px;
+  width: 80px;
 }
 
 .point.active {
@@ -53,7 +53,7 @@ footer {
 
 .foundation,
 .boardhead {
-  height: 15px;
+  height: 1.5em;
 }
 
 .coinboard h1 {
@@ -62,8 +62,8 @@ footer {
 
 .coinboard button {
   width: 100%;
-  padding: 10px 0px;
-  font-size: 14px;
+  padding: 1em 0px;
+  font-size: 1em;
   font-weight: bold;
   color: white;
   background-color: red;
