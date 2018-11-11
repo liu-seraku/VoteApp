@@ -41,7 +41,7 @@ window.onload = function() {
       points.removeChild(point[0]);
     }
 
-    for (var i = number-1 ; i >= 0; i--) {
+    for (var i = number - 1; i >= 0; i--) {
       var point = document.createElement("div");
       point.setAttribute("class", "point");
       var pointNumber = document.createTextNode(i + 1);
@@ -56,7 +56,10 @@ window.onload = function() {
       point[i].setAttribute("class", "point");
     }
     var button = document.getElementsByClassName("votebtn")[0];
-    button.removeAttribute("disabled");
+    var coinNum = document.getElementsByClassName("coin")[0].firstChild;
+    if (coinNum.nodeValue > 0) {
+      button.removeAttribute("disabled");
+    }
   }
 
   var voteButton = document.getElementsByClassName("votebtn")[0];
