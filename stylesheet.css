@@ -19,7 +19,7 @@ footer {
 
 .poinboard {
   background-color: silver;
-  width: 168px;
+  width: 252px;
   padding: 0px 10px;
   position: absolute;
   bottom: 5%;
@@ -67,11 +67,6 @@ footer {
   font-weight: bold;
   color: white;
   background-color: red;
-}
-
-.coinboard button:hover {
-  cursor: pointer;
-  opacity: 0.7
 }
 
 .coinboard button:disabled {

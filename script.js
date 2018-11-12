@@ -4,6 +4,10 @@ window.onload = function() {
     var coinNum = document.getElementsByClassName("coin")[0].firstChild;
     if (coinNum.nodeValue > 0) {
       coinNum.nodeValue -= 1;
+      if(coinNum.nodeValue == 0){
+        alert("COINがなくなったため投票できません。");
+        document.getElementsByClassName("votebtn")[0].setAttribute("disabled", "");
+      }
     }
   }
 
@@ -22,8 +26,7 @@ window.onload = function() {
     if (lightedPoints.length < allPoints.length) {
       var ifVote = confirm("投票します、よろしいですか？");
       if (ifVote == true) {
-        this.setAttribute("disabled", "");
-        alert("投票しました、複数回投票はできません。");
+        alert("投票しました。");
         reduceCoin();
         lightPoint();
       }
@@ -33,7 +36,7 @@ window.onload = function() {
   }
 
   function setPoints() {
-    var number = document.getElementsByClassName("inputnumber")[0].value;
+    var number = document.getElementsByClassName("inputnumber")[0].value * 3;
     var points = document.getElementsByClassName("points")[0];
     var point = document.getElementsByClassName("point");
     var pointNumber = point.length;
