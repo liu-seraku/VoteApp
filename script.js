@@ -4,10 +4,13 @@ window.onload = function() {
     var coinNum = document.getElementsByClassName("coin")[0].firstChild;
     if (coinNum.nodeValue > 0) {
       coinNum.nodeValue -= 1;
-      if(coinNum.nodeValue == 0){
-        alert("COINがなくなったため投票できません。");
+      if (coinNum.nodeValue == 0) {
         document.getElementsByClassName("votebtn")[0].setAttribute("disabled", "");
       }
+      var coins = document.getElementsByClassName("coinimg");
+      var coinNum = document.getElementsByClassName("coin")[0].firstChild.nodeValue;
+      var lastCoin = coins[coinNum];
+      lastCoin.setAttribute("hidden","");
     }
   }
 
@@ -24,12 +27,8 @@ window.onload = function() {
     var allPoints = document.getElementsByClassName("point");
     var lightedPoints = document.getElementsByClassName("active");
     if (lightedPoints.length < allPoints.length) {
-      var ifVote = confirm("投票します、よろしいですか？");
-      if (ifVote == true) {
-        alert("投票しました。");
-        reduceCoin();
-        lightPoint();
-      }
+      reduceCoin();
+      lightPoint();
     } else {
       alert("現在は投票できません。")
     }
@@ -60,8 +59,11 @@ window.onload = function() {
     }
     var button = document.getElementsByClassName("votebtn")[0];
     var coinNum = document.getElementsByClassName("coin")[0].firstChild;
-    if (coinNum.nodeValue > 0) {
-      button.removeAttribute("disabled");
+    coinNum.nodeValue = 3;
+    button.removeAttribute("disabled");
+    var coins = document.getElementsByClassName("coinimg");
+    for (var i = 0; i < coins.length; i++) {
+      coins[i].removeAttribute("hidden");
     }
   }
 

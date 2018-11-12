@@ -17,6 +17,14 @@ footer {
   margin-bottom: 10px;
 }
 
+.title {
+  width: 25%;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  background-color: white;
+}
+
 .poinboard {
   background-color: silver;
   width: 252px;
@@ -56,13 +64,25 @@ footer {
   height: 1.5em;
 }
 
+.operationboard {
+  width: 20%;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: white;
+}
+
 .coinboard h1 {
   margin: 15px 0px;
 }
 
+.coinimg {
+  width: 20%;
+}
+
 .coinboard button {
   width: 100%;
-  padding: 1em 0px;
+  padding: 3em 0px;
   font-size: 1em;
   font-weight: bold;
   color: white;
