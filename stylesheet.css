@@ -38,7 +38,7 @@ footer {
 
 .poinboard {
   background-color: silver;
-  width: 252px;
+  width: 312px;
   padding: 0px 10px;
   position: absolute;
   bottom: 5%;
@@ -57,11 +57,11 @@ footer {
   background-color: gray;
   border: solid 2px black;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   text-align: center;
   padding: 5px 0px;
-  width: 80px;
+  width: 100px;
 }
 
 .point.active {
@@ -81,7 +81,6 @@ footer {
   position: absolute;
   bottom: 5%;
   right: 5%;
-  background-color: white;
 }
 
 .coinboard h1 {
@@ -98,9 +97,9 @@ footer {
   position: relative;
 }
 
-.coinboard .coins{
+.coinboard .coins {
   position: absolute;
-  top: -67%;
+  top: -60%;
   overflow: hidden;
 }
 
@@ -111,11 +110,35 @@ footer {
 
 .coinboard button {
   width: 100%;
-  padding: 3em 0px;
-  font-size: 1em;
+  display: inline-block;
+  font-size: 1.5em;
   font-weight: bold;
-  color: white;
-  background-color: red;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  text-decoration: none;
+  background: #2b68ee;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-left: 0px;
+  border-top: 0px;
+  border-radius: 10px;
+}
+
+.coinboard button:active {
+  /*
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  */
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  background-color: #4e5288;
+  /*影を小さく*/
+  /*
+  border-bottom: none;
+  */
 }
 
 .coinboard button:disabled {
