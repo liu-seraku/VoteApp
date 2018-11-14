@@ -1,77 +1,47 @@
-window.onload = function() {
+var app = require('express')(); //expressを使うため
+var http = require('http').Server(app); //expressを使って通信を扱う
+var io = require('socket.io')(http); //socketを使うため
+var POST = process.env.PORT || 8080;
 
-  function reduceCoin() {
-    var coinNum = document.getElementsByClassName("coin")[0].firstChild;
-    if (coinNum.nodeValue > 0) {
-      coinNum.nodeValue -= 1;
-      if (coinNum.nodeValue == 0) {
-        document.getElementsByClassName("votebtn")[0].setAttribute("disabled", "");
-      }
-      var coins = document.getElementsByClassName("coinimg");
-      var coinNum = document.getElementsByClassName("coin")[0].firstChild.nodeValue;
-      var lastCoin = coins[coinNum];
-      lastCoin.setAttribute("hidden","");
-    }
-  }
+//ルートディレクトリにアクセスした時に動く処理
+app.get('/', function (req, res) {
+    //index.htmlにリダイレクトする
+    res.sendFile(__dirname + '/index.html');
+});
 
-  function lightPoint() {
-    var allPoints = document.getElementsByClassName("point");
-    var lightedPoints = document.getElementsByClassName("active");
-    if (lightedPoints.length < allPoints.length) {
-      var nextPoint = allPoints[allPoints.length - lightedPoints.length - 1];
-      nextPoint.setAttribute("class", "point active");
-    }
-  }
+app.get('/resetcss.css', function (req, res) {
+    res.sendFile(__dirname + '/resetcss.css');
+});
 
-  function vote() {
-    var allPoints = document.getElementsByClassName("point");
-    var lightedPoints = document.getElementsByClassName("active");
-    if (lightedPoints.length < allPoints.length) {
-      reduceCoin();
-      lightPoint();
-    } else {
-      alert("現在は投票できません。")
-    }
-  }
+app.get('/stylesheet.css', function (req, res) {
+    res.sendFile(__dirname + '/stylesheet.css');
+});
 
-  function setPoints() {
-    var number = document.getElementsByClassName("inputnumber")[0].value * 3;
-    var points = document.getElementsByClassName("points")[0];
-    var point = document.getElementsByClassName("point");
-    var pointNumber = point.length;
-    for (var i = 0; i < pointNumber; i++) {
-      points.removeChild(point[0]);
-    }
+app.get('/image/curtains.jpg', function (req, res) {
+    res.sendFile(__dirname + '/image/curtains.jpg');
+});
 
-    for (var i = number - 1; i >= 0; i--) {
-      var point = document.createElement("div");
-      point.setAttribute("class", "point");
-      var pointNumber = document.createTextNode(i + 1);
-      point.appendChild(pointNumber);
-      points.appendChild(point);
-    }
-  }
+app.get('/image/coin.png', function (req, res) {
+    res.sendFile(__dirname + '/image/coin.png');
+});
 
-  function resetBoard() {
-    var point = document.getElementsByClassName("point");
-    for (var i = 0; i < point.length; i++) {
-      point[i].setAttribute("class", "point");
-    }
-    var button = document.getElementsByClassName("votebtn")[0];
-    var coinNum = document.getElementsByClassName("coin")[0].firstChild;
-    coinNum.nodeValue = 3;
-    button.removeAttribute("disabled");
-    var coins = document.getElementsByClassName("coinimg");
-    for (var i = 0; i < coins.length; i++) {
-      coins[i].removeAttribute("hidden");
-    }
-  }
+app.get('/behavior.js', function (req, res) {
+    res.sendFile(__dirname + '/behavior.js');
+});
 
-  var voteButton = document.getElementsByClassName("votebtn")[0];
-  var setNumberBtn = document.getElementsByClassName("setnumber")[0];
-  var resetBtn = document.getElementsByClassName("reset")[0];
-  voteButton.onclick = vote;
-  setNumberBtn.onclick = setPoints;
-  resetBtn.onclick = resetBoard;
+io.on('connection', function (socket) {
+    socket.on('vote', function (msg) {
+        io.emit('vote', msg);
+    });
+    socket.on('set points', function (msg) {
+        io.emit('set points', msg);
+    });
+    socket.on('reset board', function (msg) {
+        io.emit('reset board', msg);
+    });
+});
 
-}
+//接続待ち状態になる
+http.listen(POST, function () {
+    console.log('接続開始', POST);
+});

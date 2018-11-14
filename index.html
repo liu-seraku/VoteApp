@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>投票アプリ</title>
+  <link rel="stylesheet" type="text/css" href="/resetcss.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <script>
+    var socket = io();
+  </script>
+
+  <main>
+
+    <div class="ctrlboard">
+      <legend>Setting Board</legend>
+      <div>
+        <label>投票者の総人数：</label>
+        <input type="text" class="inputnumber" value="10">
+        <button class="setnumber">確認</button>
+      </div>
+      <div>
+        <button class="reset">リセット</button>
+      </div>
+    </div>
+
+    <img class="stage" src="/image/curtains.jpg" alt="ステージ">
+
+    <div class="poinboard">
+      <div class="boardhead">
+      </div>
+
+      <div class="points">
+      </div>
+
+      <div class="foundation">
+      </div>
+    </div>
+
+    <div class="operationboard">
+      <div class="coinboard">
+        <h1 hidden>COIN:<span class="coin">3</span></h1>
+        <div class="coins">
+          <img class="coinimg coinimg1" src="/image/coin.png" alt="coin">
+          <img class="coinimg coinimg2" src="/image/coin.png" alt="coin">
+          <img class="coinimg coinimg3" src="/image/coin.png" alt="coin">
+        </div>
+        <button class="votebtn">投票する</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="text/javascript" src="/behavior.js">
+  </script>
+
+</body>
+
+</html>

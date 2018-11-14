@@ -1,0 +1,26 @@
+{
+  "name": "pointapp",
+  "version": "1.0.0",
+  "description": "point counting application",
+  "main": "script.js",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node script.js"
+  },
+  "engines": {
+    "node": "10.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/voting-app-18630.git"
+  },
+  "keywords": [
+    "point"
+  ],
+  "author": "Liu Ziming",
+  "license": "ISC"
+}
