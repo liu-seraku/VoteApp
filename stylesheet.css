@@ -153,6 +153,7 @@ footer {
     content:url(/image/curtains-l.png);
     display: block;
     width: 100%;
+    height: 800px;
   }
 
   .point {
