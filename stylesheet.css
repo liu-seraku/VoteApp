@@ -151,17 +151,17 @@ footer {
   .stage {
     display: block;
     width: 100%;
-    height: 650px;
+    height: 800px;
   }
 
   .point {
     background-color: gray;
     border: solid 2px black;
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: bold;
     text-align: center;
-    padding: 0px;
+    padding: 2px 0px 1px;
     width: 100px;
   }
 }
