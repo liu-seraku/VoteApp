@@ -21,6 +21,10 @@ app.get('/image/curtains.jpg', function (req, res) {
     res.sendFile(__dirname + '/image/curtains.jpg');
 });
 
+app.get('/image/curtains-l.png', function (req, res) {
+    res.sendFile(__dirname + '/image/curtains-l.png');
+});
+
 app.get('/image/coin.png', function (req, res) {
     res.sendFile(__dirname + '/image/coin.png');
 });

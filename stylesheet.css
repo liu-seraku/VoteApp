@@ -6,6 +6,7 @@ footer {
 }
 
 .stage {
+  content:url(/image/curtains.jpg);
   display: block;
   width: 100%;
 }
@@ -149,9 +150,9 @@ footer {
 
 @media (orientation:landscape) {
   .stage {
+    content:url(/image/curtains-l.png);
     display: block;
     width: 100%;
-    height: 800px;
   }
 
   .point {
