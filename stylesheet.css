@@ -6,7 +6,7 @@ footer {
 }
 
 .stage {
-  content:url(/image/curtains.jpg);
+  content: url(/image/curtains.jpg);
   display: block;
   width: 100%;
 }
@@ -69,6 +69,13 @@ footer {
   background-color: yellow;
   color: red;
   border-color: red;
+  transition-duration: 0.3s;
+}
+
+.point.superacive {
+  background-color: red;
+  border: solid 2px yellow;
+  color: yellow;
   transition-duration: 0.3s;
 }
 
@@ -150,7 +157,7 @@ footer {
 
 @media (orientation:landscape) {
   .stage {
-    content:url(/image/curtains-l.jpg);
+    content: url(/image/curtains-l.jpg);
     display: block;
     width: 100%;
     height: 800px;
