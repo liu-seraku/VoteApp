@@ -146,3 +146,12 @@ footer {
   cursor: default;
   opacity: 1;
 }
+
+@media (orientation:landscape) {
+  .stage {
+    height: 650px;
+  }
+  .point {
+    font-size: 0.8em;
+  }
+}
