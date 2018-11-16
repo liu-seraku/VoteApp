@@ -150,7 +150,7 @@ footer {
 
 @media (orientation:landscape) {
   .stage {
-    content:url(/image/curtains-l.png);
+    content:url(/image/curtains-l.jpg);
     display: block;
     width: 100%;
     height: 800px;
