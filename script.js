@@ -22,7 +22,7 @@ app.get('/image/curtains.jpg', function (req, res) {
 });
 
 app.get('/image/curtains-l.jpg', function (req, res) {
-    res.sendFile(__dirname + '/image/curtains-l.png');
+    res.sendFile(__dirname + '/image/curtains-l.jpg');
 });
 
 app.get('/image/coin.png', function (req, res) {
