@@ -31,7 +31,7 @@ window.onload = function () {
       var superpoint = Math.ceil(allPoints.length/4)*3;
       if (lightedPoints.length >= superpoint){
         var nextPoint = allPoints[allPoints.length - lightedPoints.length - 1];
-        nextPoint.setAttribute("class", "point superactive");
+        nextPoint.setAttribute("class", "point active superactive");
       } else {
         var nextPoint = allPoints[allPoints.length - lightedPoints.length - 1];
         nextPoint.setAttribute("class", "point active");
