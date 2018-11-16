@@ -150,9 +150,10 @@ footer {
 @media (orientation:landscape) {
   .stage {
     display: block;
-  width: 100%;
+    width: 100%;
     height: 650px;
   }
+
   .point {
     background-color: gray;
     border: solid 2px black;
@@ -160,7 +161,7 @@ footer {
     font-size: 0.8em;
     font-weight: bold;
     text-align: center;
-    padding: 5px 0px;
+    padding: 0px;
     width: 100px;
   }
 }
