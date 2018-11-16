@@ -33,6 +33,10 @@ app.get('/behavior.js', function (req, res) {
     res.sendFile(__dirname + '/behavior.js');
 });
 
+app.get('/sound/Coin.mp3', function (req, res) {
+    res.sendFile(__dirname + '/sound/Coin.mp3');
+});
+
 io.on('connection', function (socket) {
     socket.on('vote', function (msg) {
         io.emit('vote', msg);

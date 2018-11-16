@@ -31,6 +31,10 @@ window.onload = function () {
       var nextPoint = allPoints[allPoints.length - lightedPoints.length - 1];
       nextPoint.setAttribute("class", "point active");
     }
+
+    var sound = document.getElementsByTagName("audio")[0];
+    sound.load();
+    sound.play();
   }
 
   function vote() {
