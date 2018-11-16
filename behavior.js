@@ -28,8 +28,8 @@ window.onload = function () {
     var allPoints = document.getElementsByClassName("point");
     var lightedPoints = document.getElementsByClassName("active");
     if (lightedPoints.length < allPoints.length) {
-      var superpoint = Math.ceil(allPoints.length/12)*3;
-      if (lightedPoints.length > superpoint){
+      var superpoint = Math.ceil(allPoints.length/4)*3;
+      if (lightedPoints.length >= superpoint){
         var nextPoint = allPoints[allPoints.length - lightedPoints.length - 1];
         nextPoint.setAttribute("class", "point superactive");
       } else {
